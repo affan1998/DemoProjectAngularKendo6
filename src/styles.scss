@@ -1,0 +1,136 @@
+
+@import './../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+.example-wrapper,.example-col{ vertical-align: top; }
+
+.pedro {
+    background-image: url("https://demos.telerik.com/kendo-ui/content/web/Customers/SPLIR.jpg");
+}
+
+.thomas {
+    background-image: url("https://demos.telerik.com/kendo-ui/content/web/Customers/RICSU.jpg");
+}
+
+.christina {
+    background-image: url("https://demos.telerik.com/kendo-ui/content/web/Customers/BERGS.jpg");
+}
+
+.paula {
+    background-image: url("https://demos.telerik.com/kendo-ui/content/web/Customers/RATTC.jpg");
+} 
+
+.customer-photo {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: 32px 35px;
+    background-position: center center;
+    vertical-align: middle;
+    line-height: 32px;
+    box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2);
+    margin-left: 5px;
+}
+
+.customer-name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+    padding-left: 10px;
+}
+
+.red {
+    color: #d9534f;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+
+
+
+
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  
+
+
+ 
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+.basic-container {
+  padding: 30px;
+}
+.version-info {
+  font-size: 8pt;
+  float: right;
+  margin: 8px;
+}
+
+
+.nav-link{
+  color:BLACK;
+  transition:1s all ease-in-out;
+  position: relative;
+}
+.nav-link::after{
+  content:'';
+  background: red;
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  bottom:0px;
+  left:0px;
+  transition:.2s all ease-in-out;
+}
+.nav-link.active::after{
+  width: 100%;
+  transition:1s all ease-in-out;
+}
+.nav-link.active{
+  color:red;
+  transition:1s all ease-in-out;
+} 
+.nav-link:focus
+{
+  outline: none !important;
+ 
+}
+.point
+{
+  cursor: pointer;
+}

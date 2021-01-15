@@ -1,0 +1,30 @@
+<div *ngIf="item">
+<label>Text Area</label>&nbsp;
+<textarea kendoTextArea ></textarea><br>
+<label>Mask</label>&nbsp;
+<kendo-maskedtextbox
+                    [includeLiterals]="includeLiterals"
+                    [(value)]="maskedValue"
+                    [mask]="'0000-0000000'"
+                ></kendo-maskedtextbox>
+                
+<br>
+<label>Text: {{maskedValue}}</label>
+<p>
+  Today's item: {{item}}
+</p>
+<kendo-chart>
+  <kendo-chart-series>
+    <kendo-chart-series-item
+        type="donut" [data]="data"
+        categoryField="kind" field="share">
+      <kendo-chart-series-item-labels
+        [content]="labelContent"
+        color="#fff" background="none">
+      </kendo-chart-series-item-labels>
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+  <kendo-chart-legend [visible]="false"></kendo-chart-legend>
+</kendo-chart>
+</div>
+

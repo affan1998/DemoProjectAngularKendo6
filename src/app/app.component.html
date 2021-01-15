@@ -1,0 +1,72 @@
+<style>
+    .k-appbar{
+        width: 100%;
+    }
+    .navbar-expand-md .navbar-collapse{
+        width: auto;
+    }
+    .navbar{
+        padding:0px;
+    }
+    .k-appbar{
+        padding: 1rem .5rem;
+    }
+</style>
+
+<nav class="navbar navbar-expand-md ">
+<kendo-appbar [position]="'top'">
+   
+   <div class="align-items-center align-self-center d-flex mt-md-n2">
+    <kendo-appbar-section>
+        <button class="k-button k-button-clear d-md-none" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <kendo-icon [name]="'menu'"></kendo-icon>
+        </button>
+    </kendo-appbar-section>
+
+    <kendo-appbar-section class="nav-link point"  routerLink="/grid" (click)="flag=false">
+        <h1 class="title"><span class="d-md-inline-block d-none material-icons">
+            touch_app
+            </span>Demo</h1>
+    </kendo-appbar-section>
+</div>
+<div class="align-content-center d-flex ml-auto order-md-1">
+<kendo-appbar-section class="actions">
+    <kendo-badge-container>
+        <button class="k-button k-button-clear">
+            <kendo-icon [name]="'bell'"></kendo-icon>
+        </button>
+        <kendo-badge [shape]="'dot'" [themeColor]="'warning'" [size]="'small'" [position]="'inside'"></kendo-badge>
+    </kendo-badge-container>
+    <span class="k-appbar-separator"></span>
+</kendo-appbar-section>
+
+<kendo-appbar-section>
+    <kendo-avatar [imageSrc]="kendokaAvatar" [shape]="'circle'" class="mx-2"  [width]="'26px'" [height]="'26px'"></kendo-avatar>
+</kendo-appbar-section>
+</div>
+<div  class="collapse navbar-collapse order-1 order-md-0" id="collapsibleNavbar">
+    <kendo-appbar-section class="d-flex justify-content-center k-appbar-section">
+        <ul class="d-flex flex-wrap justify-content-center">
+            <li class="nav-link" routerLink="/grid" routerLinkActive="active" (click)="flag=false"><span>Grid</span></li>
+            <li class="nav-link" routerLink="/buttons" routerLinkActive="active" (click)="flag=false"><span>Buttons</span></li>
+            <li class="nav-link" routerLink="/charts" routerLinkActive="active" (click)="flag=true"><span>Charts</span></li>
+            <li class="nav-link" routerLink="/tooltips" routerLinkActive="active" (click)="flag=false"><span>Tool Tip</span></li>
+        </ul>
+    </kendo-appbar-section>
+</div>
+
+   
+
+    
+</kendo-appbar>
+</nav>
+<br />
+ <div class="container-fluid">
+    <div class="row">
+<router-outlet>
+    <app-chart *ngIf="flag==true" [item]="currentItem"></app-chart>
+</router-outlet>
+</div>
+</div>
+
+
